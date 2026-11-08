@@ -2,7 +2,7 @@ import http from 'node:http';
 import crypto from 'node:crypto';
 const RPC = process.env.SOLANA_RPC || 'https://api.devnet.solana.com';
 const RELAY_KEY = process.env.RELAY_KEY || '';
-const READ_ALLOWED = new Set(['getSignaturesForAddress','getTransaction','getHealth','getLatestBlockhash','getBalance']);
+const READ_ALLOWED = new Set(['getSignaturesForAddress','getTransaction','getSignatureStatuses','getAccountInfo','getHealth','getLatestBlockhash','getBalance','getBlockHeight']);
 const WRITE_ALLOWED = new Set(['sendTransaction']);
 const isDevnet = /devnet/i.test(RPC);
 // naive per-key/ip sliding-window rate limiter
