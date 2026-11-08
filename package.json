@@ -1,0 +1,1 @@
+{"name":"trustlayer-rpc-proxy","type":"module","scripts":{"start":"node server.js"}}
